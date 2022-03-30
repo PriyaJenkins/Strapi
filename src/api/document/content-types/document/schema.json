@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "singularName": "document",
+    "pluralName": "documents",
+    "displayName": "documents",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "documentName": {
+      "type": "string"
+    },
+    "documentFile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "files"
+      ]
+    },
+    "documentDate": {
+      "type": "date"
+    },
+    "documentType": {
+      "type": "enumeration",
+      "enum": [
+        "Nutrition",
+        "Racing",
+        "Technique",
+        "Training"
+      ]
+    }
+  }
+}

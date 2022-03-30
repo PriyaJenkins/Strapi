@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_details",
+  "info": {
+    "singularName": "user-detail",
+    "pluralName": "user-details",
+    "displayName": "user-details",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DateOfBirth": {
+      "type": "date"
+    },
+    "RaceCategory": {
+      "type": "enumeration",
+      "enum": [
+        "J12",
+        "J13",
+        "J14",
+        "J15",
+        "J16",
+        "J17",
+        "J18",
+        "WJ12",
+        "WJ13",
+        "WJ14",
+        "WJ15",
+        "WJ16",
+        "WJ17",
+        "WJ18",
+        "U23",
+        "U23LWT",
+        "WU23",
+        "WU23LWT",
+        "WSenior",
+        "MSenior",
+        "WSeniorLWT",
+        "MSeniorLWT"
+      ]
+    },
+    "username": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "user_detail"
+    },
+    "fullname": {
+      "type": "string"
+    }
+  }
+}

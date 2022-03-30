@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_sessions",
+  "info": {
+    "singularName": "training-session",
+    "pluralName": "training-sessions",
+    "displayName": "Training-Session",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "sessionType": {
+      "type": "enumeration",
+      "enum": [
+        "water",
+        "weights",
+        "erg",
+        "circuits",
+        "run",
+        "cycle",
+        "other"
+      ]
+    },
+    "trainingType": {
+      "type": "enumeration",
+      "enum": [
+        "training",
+        "test",
+        "race"
+      ]
+    },
+    "sessionNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "training_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::training-detail.training-detail"
+    },
+    "SessionAttended": {
+      "type": "boolean"
+    },
+    "sessionNotes": {
+      "type": "text"
+    },
+    "sessionAttachment": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "username": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "training_sessions"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "attributes": {
+      "user": {
+        "model": "user",
+        "via": "user-details"
+      }
+    }
+  }

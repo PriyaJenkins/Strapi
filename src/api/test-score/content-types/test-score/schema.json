@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_scores",
+  "info": {
+    "singularName": "test-score",
+    "pluralName": "test-scores",
+    "displayName": "testScore"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "testTitle": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "testDate": {
+      "type": "date"
+    },
+    "split": {
+      "type": "time"
+    },
+    "time": {
+      "type": "time"
+    },
+    "distance": {
+      "type": "integer"
+    }
+  }
+}

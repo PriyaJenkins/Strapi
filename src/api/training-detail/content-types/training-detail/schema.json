@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_details",
+  "info": {
+    "singularName": "training-detail",
+    "pluralName": "training-details",
+    "displayName": "training-detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SessionDate": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    },
+    "Attachment": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "SessionNumber": {
+      "type": "integer"
+    },
+    "SessionComplete": {
+      "type": "boolean"
+    },
+    "sessionID": {
+      "type": "uid"
+    }
+  }
+}
