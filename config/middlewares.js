@@ -6,6 +6,7 @@ module.exports = [
     config: {
       enabled: true,
       header: '*',
+      origin: ["http://localhost:8100", 'https://strapi-2lvd.onrender', "http://localhost:1337"],
       
     }
   },
